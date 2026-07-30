@@ -115,7 +115,7 @@ export function SiteHeader() {
         {/* 3 — CTA buttons */}
         <div className="flex items-center gap-4">
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=helogaluh@gmail.com&su=Let%27s%20Work%20Together%20%5BYour%20Brand%20Name%5D"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=helogaluh@gmail.com&su=Let%27s%20Work%20Together%20%5BYour%20Brand%20Name%5D%20x%20Clarta%20Studio"
             target="_blank"
             rel="noreferrer"
             className="flex h-12 w-32 items-center justify-center rounded-[99px] bg-[#0d0d0d] text-[14px] font-medium leading-none text-white transition-transform hover:-translate-y-0.5"
@@ -282,7 +282,7 @@ export function SiteFooter() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=helogaluh@gmail.com&su=Let%27s%20Work%20Together%20%5BYour%20Brand%20Name%5D"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=helogaluh@gmail.com&su=Let%27s%20Work%20Together%20%5BYour%20Brand%20Name%5D%20x%20Clarta%20Studio"
               target="_blank"
               rel="noreferrer"
               className="flex h-12 w-32 items-center justify-center rounded-[99px] bg-[#0d0d0d] text-[14px] font-medium leading-none text-white transition-transform hover:-translate-y-0.5"
