@@ -15,7 +15,7 @@ export const homeWorks: HomeWork[] = [
     id: "app",
     title: "App",
     images: [
-      { src: "/home/work-app-1.png", alt: "App design — mobile dashboard" },
+      { src: "/home/work-app-1.webp", alt: "App design — mobile dashboard" },
     ],
   },
   {
@@ -23,7 +23,7 @@ export const homeWorks: HomeWork[] = [
     title: "Dashboard",
     images: [
       {
-        src: "/home/work-dashboard-1.png",
+        src: "/home/work-dashboard-1.webp",
         alt: "Dashboard design — analytics overview",
       },
     ],
@@ -33,7 +33,7 @@ export const homeWorks: HomeWork[] = [
     title: "Website",
     images: [
       {
-        src: "/home/work-website-1.png",
+        src: "/home/work-website-1.webp",
         alt: "Website design — Tasker landing page",
       },
     ],
@@ -42,7 +42,7 @@ export const homeWorks: HomeWork[] = [
     id: "branding",
     title: "Branding",
     images: [
-      { src: "/home/work-branding-1.png", alt: "Branding — Unseen AI" },
+      { src: "/home/work-branding-1.webp", alt: "Branding — Unseen AI" },
     ],
   },
 ];

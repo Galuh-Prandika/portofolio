@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caveat, Instrument_Serif, Inter, Roboto_Mono } from "next/font/google";
+import { Caveat, Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
 import { ProgressiveBlur } from "@/components/progressive-blur";
@@ -15,14 +15,6 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  display: "swap",
-  style: ["normal", "italic"],
-  weight: "400",
 });
 
 const caveat = Caveat({
@@ -100,7 +92,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${instrumentSerif.variable} ${caveat.variable} ${robotoMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${caveat.variable} ${robotoMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <script
