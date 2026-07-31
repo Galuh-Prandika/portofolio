@@ -5,6 +5,7 @@ import { ToolsExperience } from "@/components/tools-experience";
 export const metadata: Metadata = {
   description:
     "The design, AI, management, and build tools Galuh Prandika uses day to day.",
+  alternates: { canonical: "/tools" },
 };
 
 export default function ToolsPage() {

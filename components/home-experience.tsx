@@ -8,6 +8,7 @@ import { homeWorks } from "@/components/works-data";
 export function HomeExperience() {
   return (
     <div className="min-h-screen bg-[#fcfcfc] font-sans text-[#242424]">
+      <h1 className="sr-only">Galuh Prandika — Designer &amp; Engineer</h1>
       <SiteHeader />
       <SiteMenu active="works" />
 

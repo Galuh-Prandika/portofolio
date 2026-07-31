@@ -4,6 +4,7 @@ import { TestimonialsExperience } from "@/components/testimonials-experience";
 
 export const metadata: Metadata = {
   description: "What people say about working with Galuh Prandika.",
+  alternates: { canonical: "/testimonials" },
 };
 
 export default function TestimonialsPage() {
