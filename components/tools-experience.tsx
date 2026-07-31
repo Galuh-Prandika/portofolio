@@ -23,7 +23,7 @@ export function ToolsExperience() {
                 {section.tools.map((tool) => (
                   <div
                     key={tool.label}
-                    className="flex h-[68px] items-center gap-4 rounded-[12px] bg-[#f7f7f7] px-5 md:h-[76px]"
+                    className="flex items-center gap-4 rounded-[12px] bg-[#f7f7f7] px-5 py-[18px]"
                   >
                     <span className="relative size-[23.4px] shrink-0 overflow-hidden rounded-[5.2px]">
                       <Image

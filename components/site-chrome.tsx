@@ -34,7 +34,7 @@ export function InlineMark({
 }) {
   return (
     <span
-      className={`relative inline-block h-[19px] w-[19px] -translate-y-[2px] overflow-hidden rounded-[4px] align-middle ${
+      className={`relative inline-block h-[17px] w-[17px] -translate-y-[1px] overflow-hidden rounded-[4px] align-middle md:h-[19px] md:w-[19px] md:-translate-y-[2px] ${
         flush ? "mr-[0.25em]" : "mx-[0.25em]"
       }`}
     >
@@ -53,7 +53,7 @@ export function InlineMark({
 /** Shared header: illustration → intro paragraph → CTA. Same on every page. */
 export function SiteHeader() {
   return (
-    <header className="px-4 pt-4 md:px-8 md:pt-[175px]">
+    <header className="px-4 pt-16 md:px-8 md:pt-[175px]">
       <div className="mx-auto flex w-full max-w-[380px] flex-col gap-16 md:max-w-[711px]">
         {/* 1 — Illustration */}
         <Image
@@ -66,7 +66,7 @@ export function SiteHeader() {
         />
 
         {/* 2 — Intro paragraph */}
-        <p className="max-w-[711px] text-[18px] font-normal leading-[32px] text-[#888888] md:text-[20px] md:leading-[36px]">
+        <p className="max-w-[711px] text-[16px] font-normal leading-[32px] text-[#888888] md:text-[20px] md:leading-[36px]">
           My name is
           <InlineMark src="/home/avatar-galuh.png" alt="Galuh Prandika" />
           <span className="text-black">Galuh Prandika</span>, a young and
@@ -106,7 +106,7 @@ export function SiteHeader() {
           </span>
           <a
             href="mailto:hello@galuhprandika.com"
-            className="font-caveat text-[24px] leading-[32px] text-black underline decoration-from-font underline-offset-[3px] md:text-[26px] md:leading-[36px]"
+            className="font-caveat text-[20px] leading-[32px] text-black underline decoration-from-font underline-offset-[3px] md:text-[26px] md:leading-[36px]"
           >
             You know who to call.
           </a>
@@ -120,7 +120,7 @@ export function SiteHeader() {
             rel="noreferrer"
             className="flex h-12 w-32 items-center justify-center rounded-[99px] bg-[#0d0d0d] text-[14px] font-medium leading-none text-white transition-transform hover:-translate-y-0.5"
           >
-            Let&apos;s Chat
+            Send a mail
           </a>
         </div>
       </div>
@@ -190,7 +190,7 @@ export function SiteFooter() {
     <footer className="px-4 pb-4 md:px-8 md:pb-[30px]">
       <div className="mx-auto w-full max-w-[380px] md:max-w-[711px]">
         {/* Local clocks — content→clock gap matches the menu→content gap (64px / 96px) */}
-        <div className="mt-[64px] flex items-center justify-between font-mono text-[18px] leading-[36px] text-[#888888] md:mt-[128px]">
+        <div className="mt-[64px] flex items-center justify-between font-mono text-[16px] leading-[36px] text-[#888888] md:mt-[128px]">
           <FooterClock label="JKT" timeZone="Asia/Jakarta" />
           <FooterClock label="NYC" timeZone="America/New_York" />
         </div>
@@ -206,7 +206,7 @@ export function SiteFooter() {
             className="h-[78.3px] w-[117px] select-none md:h-[87px] md:w-[130px]"
           />
 
-          <div className="flex flex-col gap-[36px] text-[18px] font-normal leading-[32px] text-[#888888] md:text-[20px] md:leading-[36px]">
+          <div className="flex flex-col gap-[36px] text-[16px] font-normal leading-[32px] text-[#888888] md:text-[20px] md:leading-[36px]">
             <p>
               <span className="text-black">
                 The tools have changed. The expectations haven&apos;t
@@ -273,7 +273,7 @@ export function SiteFooter() {
             <p>
               <a
                 href="mailto:hello@galuhprandika.com"
-                className="font-caveat text-[24px] leading-[32px] text-black underline decoration-from-font underline-offset-[3px] md:text-[26px] md:leading-[36px]"
+                className="font-caveat text-[20px] leading-[32px] text-black underline decoration-from-font underline-offset-[3px] md:text-[26px] md:leading-[36px]"
               >
                 let&apos;s make it memorable.
               </a>
@@ -287,7 +287,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="flex h-12 w-32 items-center justify-center rounded-[99px] bg-[#0d0d0d] text-[14px] font-medium leading-none text-white transition-transform hover:-translate-y-0.5"
             >
-              Let&apos;s Chat
+              Send a mail
             </a>
           </div>
         </div>

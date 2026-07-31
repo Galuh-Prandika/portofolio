@@ -33,7 +33,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Galuh Prandika — Product Designer",
+  title: "Galuh Prandika - Designer & Engineer",
   description:
     "Minimal portfolio for Galuh Prandika, a product designer working across web design, app design, product design, and Framer development.",
 };

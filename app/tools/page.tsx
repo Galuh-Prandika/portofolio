@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { ToolsExperience } from "@/components/tools-experience";
 
 export const metadata: Metadata = {
-  title: "Tools — Galuh Prandika",
   description:
     "The design, AI, management, and build tools Galuh Prandika uses day to day.",
 };
