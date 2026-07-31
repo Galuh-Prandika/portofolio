@@ -53,7 +53,7 @@ export function InlineMark({
 /** Shared header: illustration → intro paragraph → CTA. Same on every page. */
 export function SiteHeader() {
   return (
-    <header className="px-4 pt-[213px] md:px-8 md:pt-[175px]">
+    <header className="px-4 pt-4 md:px-8 md:pt-[175px]">
       <div className="mx-auto flex w-full max-w-[380px] flex-col gap-16 md:max-w-[711px]">
         {/* 1 — Illustration */}
         <Image
