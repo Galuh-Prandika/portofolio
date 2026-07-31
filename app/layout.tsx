@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Caveat, Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { ProgressiveBlur } from "@/components/progressive-blur";
 import {
   personJsonLd,
@@ -102,6 +104,7 @@ export default function RootLayout({
         />
         <ProgressiveBlur />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
