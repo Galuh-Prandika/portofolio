@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 
+import { Reveal } from "@/components/reveal";
 import { SiteFooter, SiteHeader, SiteMenu } from "@/components/site-chrome";
 import { homeWorks } from "@/components/works-data";
 
@@ -16,7 +17,8 @@ export function HomeExperience() {
       <div className="px-4 md:px-8 lg:px-[217px]">
         <div className="mt-[64px] flex flex-col gap-6 md:mt-[128px] md:gap-16">
           {homeWorks.map((work, topicIndex) => (
-            <section key={work.id} aria-label={work.title}>
+            <Reveal key={work.id}>
+              <section aria-label={work.title}>
               <h2 className="mx-auto max-w-[380px] text-[16px] font-normal leading-none text-[#888888] md:max-w-none md:text-[18px]">
                 {work.title}
               </h2>
@@ -38,7 +40,8 @@ export function HomeExperience() {
                   </div>
                 ))}
               </div>
-            </section>
+              </section>
+            </Reveal>
           ))}
         </div>
       </div>

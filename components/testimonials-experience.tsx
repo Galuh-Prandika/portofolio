@@ -1,5 +1,6 @@
 "use client";
 
+import { Reveal } from "@/components/reveal";
 import { SiteFooter, SiteHeader, SiteMenu } from "@/components/site-chrome";
 import { testimonials } from "@/components/testimonials-data";
 
@@ -14,11 +15,11 @@ export function TestimonialsExperience() {
         {/* 64px gap between the testimonials; menu→content gap matches Works & Tools */}
         <div className="mx-auto mt-[64px] flex w-full max-w-[380px] flex-col gap-16 md:mt-[128px] md:max-w-[711px]">
           {testimonials.map((item) => (
-            <article
-              key={item.index}
-              aria-label={`Testimonial ${item.index}`}
-              className="flex flex-col gap-8"
-            >
+            <Reveal key={item.index}>
+              <article
+                aria-label={`Testimonial ${item.index}`}
+                className="flex flex-col gap-8"
+              >
               {/* 01 — index */}
               <span className="text-[16px] font-normal leading-none text-[#888888] md:text-[18px]">
                 {item.index}
@@ -33,7 +34,8 @@ export function TestimonialsExperience() {
               <span className="text-[16px] font-normal leading-none text-[#888888] md:text-[18px]">
                 {item.name}
               </span>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { BackToTop } from "@/components/back-to-top";
 import { ProgressiveBlur } from "@/components/progressive-blur";
 import {
   personJsonLd,
@@ -104,6 +105,7 @@ export default function RootLayout({
         />
         <ProgressiveBlur />
         {children}
+        <BackToTop />
         <SpeedInsights />
       </body>
     </html>

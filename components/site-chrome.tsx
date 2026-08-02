@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { Reveal } from "@/components/reveal";
+
 const tabItems = [
   { id: "works", label: "Works", href: "/" },
   { id: "tools", label: "Tools", href: "/tools" },
@@ -56,17 +58,20 @@ export function SiteHeader() {
     <header className="px-4 pt-16 md:px-8 md:pt-[175px]">
       <div className="mx-auto flex w-full max-w-[380px] flex-col gap-16 md:max-w-[711px]">
         {/* 1 — Illustration */}
-        <Image
-          src="/home/illustration-cat.png"
-          alt="Galuh working at a laptop"
-          width={130}
-          height={87}
-          priority
-          className="h-[78.3px] w-[117px] select-none md:h-[87px] md:w-[130px]"
-        />
+        <Reveal delay={0}>
+          <Image
+            src="/home/illustration-cat.png"
+            alt="Galuh working at a laptop"
+            width={130}
+            height={87}
+            priority
+            className="h-[78.3px] w-[117px] select-none md:h-[87px] md:w-[130px]"
+          />
+        </Reveal>
 
         {/* 2 — Intro paragraph */}
-        <p className="max-w-[711px] text-[16px] font-normal leading-[32px] text-[#888888] md:text-[20px] md:leading-[36px]">
+        <Reveal delay={80}>
+          <p className="max-w-[711px] text-[16px] font-normal leading-[32px] text-[#888888] md:text-[20px] md:leading-[36px]">
           My name is
           <InlineMark src="/home/avatar-galuh.png" alt="Galuh Prandika" />
           <span className="text-black">Galuh Prandika</span>, a young and
@@ -111,18 +116,21 @@ export function SiteHeader() {
             You know who to call.
           </a>
         </p>
+        </Reveal>
 
         {/* 3 — CTA buttons */}
-        <div className="flex items-center gap-4">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=helogaluh@gmail.com&su=Let%27s%20Work%20Together%20%5BYour%20Brand%20Name%5D%20x%20Clarta%20Studio"
-            target="_blank"
-            rel="noreferrer"
-            className="flex h-12 w-32 items-center justify-center rounded-[99px] bg-[#0d0d0d] text-[14px] font-medium leading-none text-white transition-transform hover:-translate-y-0.5"
-          >
-            Send a mail
-          </a>
-        </div>
+        <Reveal delay={160}>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=helogaluh@gmail.com&su=Let%27s%20Work%20Together%20%5BYour%20Brand%20Name%5D%20x%20Clarta%20Studio"
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-12 w-32 items-center justify-center rounded-[99px] bg-[#0d0d0d] text-[14px] font-medium leading-none text-white transition-transform hover:-translate-y-0.5"
+            >
+              Send a mail
+            </a>
+          </div>
+        </Reveal>
       </div>
     </header>
   );
@@ -136,8 +144,9 @@ export function SiteMenu({ active }: { active: string }) {
         aria-label="Portfolio sections"
         className="mx-auto mt-[128px] w-full max-w-[380px] md:mt-[175px] md:max-w-[711px]"
       >
-        <div className="flex gap-[50px]">
-          {tabItems.map((item) => {
+        <Reveal>
+          <div className="flex gap-[50px]">
+            {tabItems.map((item) => {
             const isActive = item.id === active;
             return (
               <Link
@@ -153,8 +162,9 @@ export function SiteMenu({ active }: { active: string }) {
                 {item.label}
               </Link>
             );
-          })}
-        </div>
+            })}
+          </div>
+        </Reveal>
       </nav>
     </div>
   );
@@ -190,22 +200,27 @@ export function SiteFooter() {
     <footer className="px-4 pb-4 md:px-8 md:pb-[30px]">
       <div className="mx-auto w-full max-w-[380px] md:max-w-[711px]">
         {/* Local clocks — content→clock gap matches the menu→content gap (64px / 96px) */}
-        <div className="mt-[64px] flex items-center justify-between font-mono text-[16px] leading-[36px] text-[#888888] md:mt-[128px]">
-          <FooterClock label="JKT" timeZone="Asia/Jakarta" />
-          <FooterClock label="NYC" timeZone="America/New_York" />
-        </div>
+        <Reveal className="mt-[64px] md:mt-[128px]">
+          <div className="flex items-center justify-between font-mono text-[16px] leading-[36px] text-[#888888]">
+            <FooterClock label="JKT" timeZone="Asia/Jakarta" />
+            <FooterClock label="NYC" timeZone="America/New_York" />
+          </div>
+        </Reveal>
 
         {/* Illustration → text → CTA, 128px below clocks (mobile) / 175px (desktop) */}
         <div className="mt-[128px] flex flex-col gap-16 md:mt-[175px]">
-          <Image
-            src="/home/illustration-cat-footer.png"
-            alt="Galuh reviewing a document at a laptop"
-            width={130}
-            height={87}
-            unoptimized
-            className="h-[78.3px] w-[117px] select-none md:h-[87px] md:w-[130px]"
-          />
+          <Reveal delay={0}>
+            <Image
+              src="/home/illustration-cat-footer.png"
+              alt="Galuh reviewing a document at a laptop"
+              width={130}
+              height={87}
+              unoptimized
+              className="h-[78.3px] w-[117px] select-none md:h-[87px] md:w-[130px]"
+            />
+          </Reveal>
 
+          <Reveal delay={80}>
           <div className="flex flex-col gap-[36px] text-[16px] font-normal leading-[32px] text-[#888888] md:text-[20px] md:leading-[36px]">
             <p>
               <span className="text-black">
@@ -279,7 +294,9 @@ export function SiteFooter() {
               </a>
             </p>
           </div>
+          </Reveal>
 
+          <Reveal delay={160}>
           <div className="flex items-center gap-4">
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=helogaluh@gmail.com&su=Let%27s%20Work%20Together%20%5BYour%20Brand%20Name%5D%20x%20Clarta%20Studio"
@@ -290,16 +307,19 @@ export function SiteFooter() {
               Send a mail
             </a>
           </div>
+          </Reveal>
         </div>
 
         {/* Multilingual thanks */}
-        <div className="mt-[128px] flex flex-col gap-1 font-mono text-[16px] leading-[36px] text-[#888888] md:mt-[175px] md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-x-4 md:gap-y-2">
-          {thanksItems.map((item) => (
-            <span key={item.text} className="whitespace-nowrap">
-              {item.flag} {item.text}
-            </span>
-          ))}
-        </div>
+        <Reveal className="mt-[128px] md:mt-[175px]">
+          <div className="flex flex-col gap-1 font-mono text-[16px] leading-[36px] text-[#888888] md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-x-4 md:gap-y-2">
+            {thanksItems.map((item) => (
+              <span key={item.text} className="whitespace-nowrap">
+                {item.flag} {item.text}
+              </span>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </footer>
   );
